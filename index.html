@@ -27,18 +27,42 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3" style="padding: 10px;">
-                    <!-- Content for the 1/4 column -->
-                    <h2>Skillset</h2>
-                    <p>Data analysis, Data engineering, Visualization, Systems design, cloud infrastructure management, dev/ops</p>
+            <div class="accordion" id="mainAccordion">
+                <div class="card">
+                    <div class="card-header" id="skillsetHeading">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#skillsetCollapse" aria-expanded="true" aria-controls="skillsetCollapse">
+                                Skillset
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="skillsetCollapse" class="collapse show" aria-labelledby="skillsetHeading" data-parent="#mainAccordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Data analysis, Data engineering, Visualization, Systems design, cloud infrastructure management, dev/ops</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-9" style="padding: 10px;">
-                    <!-- Content for the 3/4 column -->
-                    <h2>Experience</h2>
-                    <p>I worked as a consultant for MNC's in helthcare and transportation domains, dealing with clients to gather requirements and build cloud applications for migrating data, storage and retrieval for analytics. I have experience completing end to end data projects involving engineering and analysis of sales data to provide daily insights to decision makers. I am comfortable with forming new teams with a process and documentation driven approach to achieve success in the long term.</p>
-                    <!-- Your existing content can go here -->
-                    
+                <div class="card">
+                    <div class="card-header" id="experienceHeading">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#experienceCollapse" aria-expanded="false" aria-controls="experienceCollapse">
+                                Experience
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="experienceCollapse" class="collapse" aria-labelledby="experienceHeading" data-parent="#mainAccordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>I worked as a consultant for MNC's in helthcare and transportation domains, dealing with clients to gather requirements and build cloud applications for migrating data, storage and retrieval for analytics. I have experience completing end to end data projects involving engineering and analysis of sales data to provide daily insights to decision makers. I am comfortable with forming new teams with a process and documentation driven approach to achieve success in the long term.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
