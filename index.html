@@ -43,7 +43,9 @@
             
             .section-title label {
                 cursor: pointer;
-                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 width: 100%;
                 padding: 15px; /* Padding only on the label */
                 margin-bottom: 0;
@@ -57,8 +59,12 @@
             }
             
             /* Style for tech icons */
+            .tech-icons {
+                display: flex;
+                gap: 15px;
+            }
+            
             .tech-icon {
-                margin-left: 10px;
                 font-size: 1.2em;
             }
             
@@ -102,9 +108,11 @@
                     <h2 class="section-title">
                         <label for="skillset-toggle">
                             Skillset
-                            <span class="tech-icon python-icon"><i class="fab fa-python"></i></span>
-                            <span class="tech-icon spark-icon"><i class="fas fa-fire"></i></span>
-                            <span class="tech-icon aws-icon"><i class="fab fa-aws"></i></span>
+                            <div class="tech-icons">
+                                <span class="tech-icon python-icon"><i class="fab fa-python"></i></span>
+                                <span class="tech-icon spark-icon"><i class="fas fa-fire"></i></span>
+                                <span class="tech-icon aws-icon"><i class="fab fa-aws"></i></span>
+                            </div>
                         </label>
                     </h2>
                     <input type="checkbox" id="skillset-toggle" class="section-toggle">
