@@ -24,9 +24,12 @@
                 display: none;
             }
             
-            /* Use checkbox technique for independent control */
-            #skillset-toggle:checked ~ #skillset-content,
-            #experience-toggle:checked ~ #experience-content {
+            /* Fixed selector to target direct siblings only */
+            input#skillset-toggle:checked + .section-content {
+                display: block;
+            }
+            
+            input#experience-toggle:checked + .section-content {
                 display: block;
             }
             
@@ -71,21 +74,21 @@
             
             <div class="sections">
                 <div class="section">
-                    <input type="checkbox" id="skillset-toggle" class="section-toggle">
                     <h2 class="section-title">
                         <label for="skillset-toggle">Skillset</label>
                     </h2>
-                    <div id="skillset-content" class="section-content">
+                    <input type="checkbox" id="skillset-toggle" class="section-toggle">
+                    <div class="section-content">
                         <p>Data analysis, Data engineering, Visualization, Systems design, cloud infrastructure management, dev/ops</p>
                     </div>
                 </div>
                 
                 <div class="section">
-                    <input type="checkbox" id="experience-toggle" class="section-toggle">
                     <h2 class="section-title">
                         <label for="experience-toggle">Experience</label>
                     </h2>
-                    <div id="experience-content" class="section-content">
+                    <input type="checkbox" id="experience-toggle" class="section-toggle">
+                    <div class="section-content">
                         <p>I worked as a consultant for MNC's in helthcare and transportation domains, dealing with clients to gather requirements and build cloud applications for migrating data, storage and retrieval for analytics. I have experience completing end to end data projects involving engineering and analysis of sales data to provide daily insights to decision makers. I am comfortable with forming new teams with a process and documentation driven approach to achieve success in the long term.</p>
                     </div>
                 </div>
