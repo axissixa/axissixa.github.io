@@ -12,7 +12,7 @@
                 padding: 10px 15px;
                 border: 1px solid rgba(0,0,0,.125);
                 cursor: pointer;
-                font-weight: 500;
+                font-weight: 300;
                 color: #212529;
                 margin-bottom: 0;
             }
@@ -24,19 +24,26 @@
                 display: none;
             }
             
-            .section:target .section-content {
+            /* Use checkbox technique for independent control */
+            #skillset-toggle:checked ~ #skillset-content,
+            #experience-toggle:checked ~ #experience-content {
                 display: block;
+            }
+            
+            /* Hide the actual checkboxes */
+            .section-toggle {
+                display: none;
             }
             
             .section-title:hover {
                 background-color: #e9ecef;
             }
             
-            .section-title a {
-                color: inherit;
-                text-decoration: none;
+            .section-title label {
+                cursor: pointer;
                 display: block;
                 width: 100%;
+                margin-bottom: 0;
             }
         </style>
         <title>Srikanth Gandhi</title>
@@ -63,20 +70,22 @@
             </div>
             
             <div class="sections">
-                <div id="skillset" class="section">
+                <div class="section">
+                    <input type="checkbox" id="skillset-toggle" class="section-toggle">
                     <h2 class="section-title">
-                        <a href="#skillset">Skillset</a>
+                        <label for="skillset-toggle">Skillset</label>
                     </h2>
-                    <div class="section-content">
+                    <div id="skillset-content" class="section-content">
                         <p>Data analysis, Data engineering, Visualization, Systems design, cloud infrastructure management, dev/ops</p>
                     </div>
                 </div>
                 
-                <div id="experience" class="section">
+                <div class="section">
+                    <input type="checkbox" id="experience-toggle" class="section-toggle">
                     <h2 class="section-title">
-                        <a href="#experience">Experience</a>
+                        <label for="experience-toggle">Experience</label>
                     </h2>
-                    <div class="section-content">
+                    <div id="experience-content" class="section-content">
                         <p>I worked as a consultant for MNC's in helthcare and transportation domains, dealing with clients to gather requirements and build cloud applications for migrating data, storage and retrieval for analytics. I have experience completing end to end data projects involving engineering and analysis of sales data to provide daily insights to decision makers. I am comfortable with forming new teams with a process and documentation driven approach to achieve success in the long term.</p>
                     </div>
                 </div>
