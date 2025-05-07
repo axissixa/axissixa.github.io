@@ -5,13 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Add Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         
         <style>
             .section-title {
                 background-color: #f8f9fa;
                 border: 1px solid rgba(0,0,0,.125);
                 margin-bottom: 0;
-                padding: 0;
+                padding: 0; /* Explicitly setting padding to 0 */
             }
             
             .section-content {
@@ -43,7 +45,7 @@
                 cursor: pointer;
                 display: block;
                 width: 100%;
-                padding: 15px;
+                padding: 15px; /* Padding only on the label */
                 margin-bottom: 0;
                 font-weight: 300;
                 color: #212529;
@@ -52,6 +54,24 @@
             /* Add some space between sections */
             .section {
                 margin-bottom: 5px;
+            }
+            
+            /* Style for tech icons */
+            .tech-icon {
+                margin-left: 10px;
+                font-size: 1.2em;
+            }
+            
+            .python-icon {
+                color: #306998;
+            }
+            
+            .spark-icon {
+                color: #E25A1C;
+            }
+            
+            .aws-icon {
+                color: #FF9900;
             }
         </style>
         <title>Srikanth Gandhi</title>
@@ -80,7 +100,12 @@
             <div class="sections">
                 <div class="section">
                     <h2 class="section-title">
-                        <label for="skillset-toggle">Skillset</label>
+                        <label for="skillset-toggle">
+                            Skillset
+                            <span class="tech-icon python-icon"><i class="fab fa-python"></i></span>
+                            <span class="tech-icon spark-icon"><i class="fas fa-fire"></i></span>
+                            <span class="tech-icon aws-icon"><i class="fab fa-aws"></i></span>
+                        </label>
                     </h2>
                     <input type="checkbox" id="skillset-toggle" class="section-toggle">
                     <div class="section-content">
